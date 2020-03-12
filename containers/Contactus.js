@@ -84,37 +84,31 @@ const Contactus = () => {
                   <Grid container spacing={3}>
                     <Grid item xs={12} sm={6}>
                       <TextField
-                        required
                         id="firstName"
                         name="firstName"
                         label="First name"
                         value={values.firstName}
                         fullWidth
-                        autoComplete="fname"
                       />
                       <ErrorMessage name="firstName"/>
                     </Grid>
                     <Grid item xs={12} sm={6}>
                       <TextField
-                        required
                         id="lastName"
                         name="lastName"
                         label="Last name"
                         value={values.lastName}
                         fullWidth
-                        autoComplete="lname"
                       />
                       <ErrorMessage name="lastName"/>
                     </Grid>
                     <Grid item xs={12}>
                       <TextField
-                        required
                         id="address1"
                         name="address1"
                         label="Address line 1"
                         value={values.address1}
                         fullWidth
-                        autoComplete="billing address-line1"
                       />
                       <ErrorMessage name="address1"/>
                     </Grid>
@@ -125,18 +119,15 @@ const Contactus = () => {
                         label="Address line 2"
                         value={values.address2}
                         fullWidth
-                        autoComplete="billing address-line2"
                       />
                     </Grid>
                     <Grid item xs={12} sm={6}>
                       <TextField
-                        required
                         id="city"
                         name="city"
                         label="City"
                         value={values.city}
                         fullWidth
-                        autoComplete="billing address-level2"
                       />
                       <ErrorMessage name="city"/>
                     </Grid>
@@ -146,34 +137,32 @@ const Contactus = () => {
                     </Grid>
                     <Grid item xs={12} sm={6}>
                       <TextField
-                        required
                         id="zip"
                         name="zip"
                         label="Zip / Postal code"
                         value={values.zip}
                         fullWidth
-                        autoComplete="billing postal-code"
                       />
                       <ErrorMessage name="zip"/>
                     </Grid>
                     <Grid item xs={12} sm={6}>
                       <TextField
-                        required
                         id="country"
                         name="country"
                         label="Country"
                         value={values.country}
                         fullWidth
-                        autoComplete="billing country"
                       />
                       <ErrorMessage name="country"/>
                     </Grid>
                     <Grid item xs={12}>
-                      <button
+                      <Button
                         type="submit"
+                        variant="contained"
+                        color="primary"
                         className={classes.button}>
                         Submit
-                      </button>
+                      </Button>
                     </Grid>
                   </Grid>
                 </form>

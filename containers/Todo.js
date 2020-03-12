@@ -1,0 +1,57 @@
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Paper from '@material-ui/core/Paper';
+import AddTodo from '../components/AddTodo';
+import VisibleTodoList from '../components/VisibleTodoList';
+import Footer from '../components/Footer';
+import Grid from '@material-ui/core/Grid';
+
+const useStyles = makeStyles(theme => ({
+  layout: {
+    width: 'auto',
+    marginLeft: theme.spacing(2),
+    marginRight: theme.spacing(2),
+    [theme.breakpoints.up(600 + theme.spacing(2) * 2)]: {
+      width: 600,
+      marginLeft: 'auto',
+      marginRight: 'auto',
+    },
+  },
+  paper: {
+    marginTop: theme.spacing(3),
+    marginBottom: theme.spacing(3),
+    padding: theme.spacing(2),
+    [theme.breakpoints.up(600 + theme.spacing(3) * 2)]: {
+      marginTop: theme.spacing(6),
+      marginBottom: theme.spacing(6),
+      padding: theme.spacing(3),
+    },
+  },
+}));
+
+const Todo = () => {
+  const classes = useStyles();
+  return (
+    <React.Fragment>
+      <main className={classes.layout}>
+        <Paper className={classes.paper}>
+          <Grid
+            container
+            spacing={0}
+            direction="column"
+            alignItems="center"
+            justify="center"
+          >
+            <Grid item xs={12}>
+              <AddTodo/>
+              <VisibleTodoList/>
+              <Footer/>
+            </Grid>
+          </Grid>
+        </Paper>
+      </main>
+    </React.Fragment>
+  );
+}
+
+export default Todo;

@@ -37,16 +37,12 @@ const FormikForm = () => (
             <input
               type="email"
               name="email"
-              onChange={handleChange}
-              onBlur={handleBlur}
               value={values.email}
             />
             <ErrorMessage name="email"/>
             <input
               type="password"
               name="password"
-              onChange={handleChange}
-              onBlur={handleBlur}
               value={values.password}
             />
             <ErrorMessage name="password"/>
